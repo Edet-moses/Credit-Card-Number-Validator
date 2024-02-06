@@ -1,0 +1,121 @@
+* {
+  overflow: hidden;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background-color: beige;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main > h1 {
+  color: crimson;
+  font-style: italic;
+  font-size: 35px;
+}
+
+.credit-card-inputs {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 2rem;
+}
+.credit-card-inputs__fields {
+  display: flex;
+  justify-content: space-between;
+}
+.credit-card-inputs__fields input {
+  border: none;
+  outline: none;
+  background: transparent;
+  box-sizing: border-box;
+  border-bottom: 2px solid #ccc;
+  font-size: 2rem;
+  width: 23%;
+  text-align: center;
+  letter-spacing: 0.5rem;
+  color: #555;
+  font-family: monospace;
+  padding: 0.5rem 0;
+  transition: all 0.3s;
+}
+
+@media (max-width: 600px) {
+  .credit-card-inputs__fields {
+    width: 80vw;
+  }
+
+  .credit-card-inputs__fields input {
+    font-size: 1rem;
+  }
+
+  .btns {
+    display: grid;
+  }
+
+  .btns > button {
+    margin-top: 10px;
+  }
+}
+
+.credit-card-inputs__fields input:focus {
+  border-color: lightseagreen;
+}
+.credit-card-inputs__fields input::placeholder {
+  color: #ccc;
+}
+.credit-card-inputs__reset, .credit-card-inputs__submit {
+  display: block;
+  background: #eee;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 2rem;
+  font-family: monospace;
+  padding: 0.5rem;
+  transition: all 0.3s;
+  margin: auto;
+  font-size: 20px;
+  font-weight: bolder;
+  color: teal;
+  font-style: italic;
+}
+.credit-card-inputs__reset:hover, .credit-card-inputs__submit:hover {
+  background: #e5e5e5;
+  box-shadow: 3px 3px 0px #99bdff;
+}
+
+.btns {
+  margin: auto;
+  margin-top: .5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 35%;
+  padding: 1rem;
+}
+
+.btns > button {
+  padding: 10px;
+}
+
+#card-name {
+  box-sizing: border-box;
+  border-radius: 15px;
+  background-color: snow;
+  border: .5px solid teal;
+  text-align: center;
+  color: crimson;
+  font-size: 20px;
+  font-style: italic;
+  padding: 5px;
+  margin: auto;
+  margin-top: 1rem;
+  display: none;
+}
